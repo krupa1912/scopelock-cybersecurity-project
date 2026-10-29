@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+lab/lab.db
+lab/lab_secure.db
+*.log
+report/results.json
+report/scopelock_report.html
