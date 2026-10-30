@@ -1,11 +1,24 @@
 # ScopeLock
 
-An AI agent for controlled penetration-testing workflows. The agent plans
-assessment steps against an authorized lab target, but every action it
-proposes passes through a deterministic, non-LLM **scope enforcer**
-before anything runs. High-risk actions require human approval, all
-actions are recorded in a tamper-evident ledger, and the agent's
-findings are only accepted when backed by captured evidence.
+**An AI Agent for Controlled Penetration-Testing Workflows**
+CS3405 — Ethical Hacking and Penetration Testing · ByteSecure Hackathon
+
+ScopeLock is an AI pentesting agent built around one idea: **the agent
+should never need to be trustworthy for the system to be safe.** Every
+action the agent proposes — whether from a real LLM or a scripted
+planner — passes through deterministic, non-AI code (a signed scope
+allowlist, a risk-tier gate, and an evidence-gated verifier) before
+anything actually runs. Destructive actions are architecturally
+blocked, not just discouraged. Every decision is written to a
+tamper-evident, hash-chained ledger.
+
+All testing happens against a self-built, intentionally vulnerable lab
+application running only on `127.0.0.1` — no external or production
+systems are ever touched.
+
+---
+
+## 1. File Structure
 
 ## Status: Day 4 (judge-facing demos) complete
 
